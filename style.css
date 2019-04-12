@@ -633,3 +633,34 @@ margin-right: 10px;
 
 
 /*<!-- hover img effect End-->*/
+
+
+.team_member {
+    background-color: black;
+    padding: 10px;
+}
+.team_member span {
+    color: red;
+    position: relative;
+    font-size: 26px;
+}
+
+.team_member span:after {
+    content: attr(data-text);
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    color: green;
+    height: 110%;
+    width: 0%;
+    z-index: 2;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.team_member:hover span::after {
+    width: 100%;
+}
